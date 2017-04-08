@@ -11,12 +11,16 @@ struct Student {
 
 void printName(struct Student student) {
   printf("First Name is: %s\n", student.firstName);
+  printf("Last Name is: %s\n", student.lastName);
+}
+
+void printGPA(struct Student student) {
+  printf("GPA is: %.2f\n", student.gpa);
 }
 
 int main()
 {
   struct Student s1;
-  struct Student students[2];
 
   strcpy(s1.ID, "0001");
   strcpy(s1.firstName, "tao");
@@ -24,9 +28,8 @@ int main()
   s1.age = 30;
   s1.gpa = 3.55;
 
-  // printf("First Name is: %s\n", s1.firstName);
   printName(s1);
-  printf("GPA is: %.2f\n", s1.gpa);
+  printGPA(s1);
 
   return 0;
 }
